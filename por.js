@@ -54,11 +54,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 4. Project Image Sliders
     const sliders = document.querySelectorAll('.slider');
-    
+
     sliders.forEach(slider => {
         let currentSlide = 0;
         const slides = slider.querySelectorAll('.slide');
-        
+
         if (slides.length <= 1) return;
 
         // Auto-rotation every 3.5 seconds
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', () => {
         const scrolled = window.pageYOffset;
         const shapes = document.querySelectorAll('.bg-shapes div');
-        
+
         shapes.forEach((shape, index) => {
             const speed = (index + 1) * 0.1;
             shape.style.transform = `translateY(${scrolled * speed}px)`;
